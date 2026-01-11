@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "ng build --configuration=production",
+  "outputDirectory": "dist/posadminportal",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

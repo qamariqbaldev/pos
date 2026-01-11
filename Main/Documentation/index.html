@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Advanced POS">
+    <meta name="author" content="ML GlobTech">
+    <meta name="copyright" content="ML GlobTech">
+    <title>Advanced POS </title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/google-code-prettify/prettify.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper" class="toggled">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand text-center" style="text-indent: 0px !important;">
+                    <img class="img-thumbnail" alt="Advanced POS" src="./img/pos.jpg">
+                    <h2>Advanced POS</h2>
+                </li>
+                <li>
+                    <a href="#intro" class="active">Introduction</a>
+                </li>
+                <li>
+                    <a href="#quickstartguide">Quick Start Guide</a>
+                </li>
+                <li>
+                    <a href="#deployeGuid">Hosting</a>
+                </li>
+                <li>
+                    <a href="#configuration">Configuration</a>
+                </li>
+                <li>
+                    <a href="#deploy">Customize & Re-Deploy </a>
+                </li>
+                <li>
+                    <a href="#features">Features</a>
+                </li>
+                <li>
+                    <a href="#projectstructure">Project Structure</a>
+                </li>
+                <li>
+                    <a href="#support">Support and Feedback</a>
+                </li>
+                <li>
+                    <a href="#conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+
+                <section id="intro">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h1 class="text-dark pt-3 ml-9">Advanced POS With Inventory Management</h1>
+                        </div>
+                    </div>
+                    <p>Hello everyone!</p>
+                    <p>Thank you for purchasing solution. If you have any questions that are beyond the scope of this
+                        help file, please feel free to email via my user page contact form <a
+                            href="https://codecanyon.net/user/mlglobtechnology">here</a>. Thanks so much!</p>
+                    <ul class="list-unstyled">
+                        <li>Created: 8 June 2022</li>
+                        <li>By: <a target="_blank"
+                                href="https://codecanyon.net/user/mlglobtechnology">mlglobtechnology</a></li>
+                        <li>Email: <a href="mailto: mlglobtech@gmail.com">mlglobtech@gmail.com</a></li>
+                    </ul>
+                </section>
+
+                <section id="quickstartguide">
+                    <h1 class="text-dark pt-3">Quick Start Guide</h1>
+                    <p>Setting up Advanced POS With Inventory Management is very simple. You will receive the following
+                        files after extracting
+                        project compressed file:</p>
+                    <img src="img/pos-structure.PNG" alt="Folder Structure" style="margin-bottom: 10px;">
+                    <ul style="list-style: decimal;">
+                        <li>
+                            <b> Build:</b> It contains the build files for both SQL Server and MySQL Provider which you
+                            can directly deploy to your server.
+                        </li>
+                        <li>
+                            <b> DatabaseScripts:</b> This folder contains initial scripts for both the database
+                            providers.
+                        </li>
+                        <li>
+                            <b>Souce Code:</b>
+                            It contains the complete source code for front-end and REST API.
+                            There are different REST API folders for SQL Server and MySQL database providers.
+                        </li>
+                    </ul>
+
+                    <h2 class="text-dark pt-3">.Net Core Installation</h2>
+                    <hr class="mt-0">
+                    <h3>Prerequisites</h3>
+                    <p>.NET CORE 7 SDK and VISUAL STUDIO 2022, SQL SERVER or MySql 8 + </p>
+                    <h4>Running local copy</h4>
+                    <ul class="list">
+                        <li>Based on your requirement choose the SQL or MySQL API in respective folder of source.
+                        </li>
+                        <li>Open solution file <b>POS.sln</b> from .Net core folder into visual studio 2022.
+                        </li>
+                        <li>Right click on solution explorer and <b> Restore nuget packages.</b></li>
+                        <li>Change database connection string in <b>appsettings.Development.json</b> in
+                            <b>POS.API </b> project.
+                        </li>
+                        <li>
+                            From Solution Explorer, Right click on <b> POS.API </b> project and click on <b>
+                                Set as Startup Project </b> from menu.
+                        </li>
+                        <li>
+                            To run project <b> Press F5</b>.
+                        </li>
+                    </ul>
+
+                    <h2 class="text-dark pt-3">Angular Installation</h2>
+                    <hr class="mt-0">
+                    <h4>Prerequisites</h4>
+                    <p>Although POS can be run without any development experience, it would be
+                        much easier if you already have some experience. The following instructions allow you to run a
+                        local copy
+                        on your machine.</p>
+
+                    <h4>Install tools</h4>
+                    <p>If you have not yet installed <b>nodejs</b>, please Download and globally install nodejs : <a
+                            href="https://nodejs.org">https://nodejs.org</a><br /> <strong>Note</strong>: download
+                        <i>Recommended For Most Users</i> version
+                    </p>
+                    <p><a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank">A detailed
+                            instruction on how to install NodeJS is available here.</a></p>
+                    <p><strong>Note</strong>: Make sure you have Node version &gt;= 4.0 and NPM &gt;=&nbsp;3 . Also
+                        globally installed <b>typescript</b>.</p>
+                    <p>Installing <b>Angular-CLI</b> globally is as simple as running this simple command:
+                        <code>npm install -g @angular/cli</code>
+                    </p>
+
+                    <p>After the tools is installed, go inside of the Angular directory and run below command to install
+                        dependencies:</p>
+                    <p>Run <code>npm install -f</code> to install node dependencies defined in <b>package.json</b>.</p>
+
+                    <h4>Running local copy</h4>
+                    <p>To run a local copy in development mode, replace REST API URI (apiUrl) variable in environment
+                        file inside <b> src --> environments -->environment.ts</b></p>
+                    <p> execute <code>ng serve</code> and go to <a href="http://localhost:4200"
+                            target="blank">http://localhost:4200</a> in your browser.</p>
+                    <p>To run the local copy in production mode and build the sources, execute
+                        <code>ng build</code>. This will builds a production version of the application. All
+                        <b>html,css and js</b> code is minified and put to <b>dist</b> folder. The contents of
+                        this folder you can to put to your production server when publishing the application.
+                    </p>
+                </section>
+
+                <section id="deployeGuid">
+                    <h1>Hosting</h1>
+                    <h3>Prerequisites</h3>
+                    <p>
+                    <ul>
+                        <li><a target="_blank" href="https://dotnet.microsoft.com/download">.Net 7 Runtime</a></li>
+                        <li><a
+                                href="https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/hosting-bundle?view=aspnetcore-6.0">The
+                                .NET Core Hosting Bundle For Window</a></li>
+                        <li>SQL Server or MySQL database provider</li>
+                    </ul>
+                    <p>In Order to host the application on Windows or Linux Server even you don't need to create
+                        database manully. you just need to change the connection string and based on you connection
+                        setting database will be created automatically once application initialize.</p>
+                    </p>
+                    <h5>Change Connection String</h5>
+                    <p>
+                        Change the connection in <b>appsettings.Development.json</b> file as describe as below
+                        image:
+                    </p>
+                    <img src="img/change-connection.png" alt="" class="noshadow">
+                    <br>
+                    <br>
+                    <h3>Host on IIS Server:</h3>
+                    <ul>
+                        <li>Copy all files and folders from either MySQLProviderBuild or SqlServerProviderBuild from
+                            Build Folder and Paste at
+                            <pre>C:\inetpub\wwwroot\{{yoursitename}}</pre>
+                        </li>
+                        <li>Open the IIS</li>
+                        <li>Add New Website</li>
+                        <li>Enter you site name</li>
+                        <li>Copy <b> C:\inetpub\wwwroot\{{yoursitename}}</b> folder path to physical Path.</li>
+                    </ul>
+                    <img src="img/iishosting.png" alt="IIS Hosting" class="noshadow">
+                    <br>
+                    <br>
+                    <img src="img/iis-rights.png" alt="IIS Hosting" class="noshadow">
+                    <br>
+                    <br>
+                    <h3>Host on Linux Server(nginx):</h3>
+                    <ul>
+                        <li><b>Step 1:</b>
+                            <a href="https://learn.microsoft.com/en-us/dotnet/core/install/linux" target="_blank">
+                                Install .Net Core 7 on Linux</a>
+                        </li>
+                        <li><b>Step 2:</b>
+                            Intall nginx <br>
+                            <pre>sudo apt update</pre>
+                            <pre>sudo apt install nginx</pre>
+
+                        </li>
+                        <li> <b>Step: 3 </b>
+                            Install MySQL<br>
+                            <pre>sudo apt update</pre>
+                            <pre>sudo apt install mysql-server</pre>
+                            <pre>sudo systemctl start mysql.service</pre>
+                        </li>
+                        <li> <b>Step: 4 </b>
+                            Install zip<br>
+                            <pre>sudo apt-get install zip</pre>
+                        </li>
+                        <li>
+                            <b>Step: 5</b>
+                            Copy all files and folders from either MySQLProviderBuild or SqlServerProviderBuild from
+                            Build Folder and Paste at /var/www/{{yourwebsitename}}
+                        </li>
+                        <li>
+                            <b>Step: 6</b>
+                            Create linux custom service to follow below steps:
+                            <ul>
+                                <li>cd /etc/systemd/system</li>
+                                <li>Create a file named your-service.service and include the following:</li>
+                                <pre>
+                                        [Unit]
+                                        Description=Example .NET Web API App running on Linux
+                                    
+                                        [Service]
+                                        WorkingDirectory=/var/www/{{yourwebsitename}}
+                                        ExecStart=/usr/share/dotnet/dotnet  /var/www/{{yourwebsitename}}/POS.API.dll
+                                        Restart=always
+                                        # Restart service after 10 seconds if the dotnet service crashes:
+                                        RestartSec=10
+                                        KillSignal=SIGINT
+                                        SyslogIdentifier=dotnet-example
+                                        User=www-data
+                                        Environment=ASPNETCORE_ENVIRONMENT=Development
+                                    
+                                        [Install]
+                                        WantedBy=multi-user.target
+                                    </pre>
+                                <li>
+                                    Reload the service files to include the new service.
+                                    <pre>sudo systemctl daemon-reload</pre>
+                                </li>
+                                <li>To enable your service on every reboot
+                                    <pre>sudo systemctl enable your-service.service</pre>
+                                </li>
+                                <li>Start your service
+                                    <pre>sudo systemctl start your-service.service</pre>
+                                </li>
+                                <li>
+                                    To check the status of your service
+                                    <pre>sudo systemctl status your-service.service</pre>
+                                </li>
+                                <li>For More Detail please visit: <br>
+                                    <a target="_blank"
+                                        href="https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-6.0">Host
+                                        ASP.NET Core on Linux with Nginx</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Step: 7</b>
+                            Configure Nginx reverse proxy
+                            <ul>
+                                <li>
+                                    <pre>cd /etc/nginx/sites-available</pre>
+                                </li>
+                                <li>Create a file named yoursite.com and include the following:
+                                    <pre>
+                                            server {
+                                                listen 80;
+                                                server_name {{yoursitename}} www.{{yoursitename}};
+                                                #listen 80 default_server;
+                                                #listen [::]:80 default_server;
+                                                location / {
+                                                    proxy_pass http://127.0.0.1:5000;
+                                                    proxy_http_version 1.1;
+                                                    proxy_set_header Upgrade $http_upgrade;
+                                                    proxy_set_header Connection keep-alive;
+                                                    proxy_set_header Host $host;
+                                                    proxy_cache_bypass $http_upgrade;
+                                                    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                                                    proxy_set_header X-Forwarded-Proto $scheme;
+                                                }
+                                            }
+                                        </pre>
+                                </li>
+                                <li>Enable Service:
+                                    <pre>sudo ln -s /etc/nginx/sites-available/yoursite.com /etc/nginx/sites-enabled/</pre>
+                                </li>
+                                <li>Restart Nginx
+                                    <pre>sudo systemctl restart nginx</pre>
+                                </li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                    <h3>Host on Linux Server(Apache):</h3>
+                    <ul>
+                        <li><b>Step 1:</b>
+                            <a href="https://learn.microsoft.com/en-us/dotnet/core/install/linux" target="_blank">
+                                Install .Net Core 7 on Linux</a>
+                        </li>
+                        <li><b>Step 2:</b>
+                            Intall Apache <br>
+                            <pre>sudo apt update</pre>
+                            <pre>sudo apt install apache2</pre>
+
+                        </li>
+                        <li> <b>Step: 3 </b>
+                            Install MySQL<br>
+                            <pre>sudo apt update</pre>
+                            <pre>sudo apt install mysql-server</pre>
+                            <pre>sudo systemctl start mysql.service</pre>
+                        </li>
+                        <li> <b>Step: 4 </b>
+                            Install zip<br>
+                            <pre>sudo apt-get install zip</pre>
+                        </li>
+                        <li>
+                            <b>Step: 5</b>
+                            Copy all files and folders from either MySQLProviderBuild or SqlServerProviderBuild from
+                            Build Folder and Paste at /var/www/{{yourwebsitename}}
+                        </li>
+                        <li>
+                            <b>Step: 6</b>
+                            Create linux custom service to follow below steps:
+                            <ul>
+                                <li>cd /etc/systemd/system</li>
+                                <li>Create a file named your-service.service and include the following:</li>
+                                <pre>
+                                        [Unit]
+                                        Description=Example .NET Web API App running on Linux
+                                    
+                                        [Service]
+                                        WorkingDirectory=/var/www/{{yourwebsitename}}
+                                        ExecStart=/usr/share/dotnet/dotnet  /var/www/{{yourwebsitename}}/POS.API.dll
+                                        Restart=always
+                                        # Restart service after 10 seconds if the dotnet service crashes:
+                                        RestartSec=10
+                                        KillSignal=SIGINT
+                                        SyslogIdentifier=dotnet-example
+                                        User=www-data
+                                        Environment=ASPNETCORE_ENVIRONMENT=Development
+                                    
+                                        [Install]
+                                        WantedBy=multi-user.target
+                                    </pre>
+                                <li>
+                                    Reload the service files to include the new service.
+                                    <pre>sudo systemctl daemon-reload</pre>
+                                </li>
+                                <li>To enable your service on every reboot
+                                    <pre>sudo systemctl enable your-service.service</pre>
+                                </li>
+                                <li>Start your service
+                                    <pre>sudo systemctl start your-service.service</pre>
+                                </li>
+                                <li>
+                                    To check the status of your service
+                                    <pre>sudo systemctl status your-service.service</pre>
+                                </li>
+                                <li>For More Detail please visit: <br>
+                                    <a target="_blank"
+                                        href="https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-apache?view=aspnetcore-6.0">Host
+                                        ASP.NET Core on Linux with Apache</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Step: 7</b>
+                            Configure Apache reverse proxy
+                            <ul>
+                                <li>
+                                    <pre>cd /etc/apache2/sites-available</pre>
+                                </li>
+                                <li>Create a file named yoursite.com and include the following:
+                                    <textarea disabled rows="15" cols="100" style="border:none;color: mediumblue;">
+
+                                            <VirtualHost *:*>
+                                                RequestHeader set "X-Forwarded-Proto" expr=%{REQUEST_SCHEME}
+                                            </VirtualHost>
+
+                                            <VirtualHost *:80>
+                                                ProxyPreserveHost On
+                                                ProxyPass / http://127.0.0.1:5000/
+                                                ProxyPassReverse / http://127.0.0.1:5000/
+                                                ServerName {{yoursitename}}
+                                                ServerAlias *.{{yoursitename}}
+                                                ErrorLog ${APACHE_LOG_DIR}helloapp-error.log
+                                                CustomLog ${APACHE_LOG_DIR}helloapp-access.log common
+                                            </VirtualHost>
+                                        </textarea>
+                                </li>
+                                <li>Enable Service:
+                                    <pre>sudo ln -s /etc/nginx/sites-available/yoursite.com /etc/nginx/sites-enabled/</pre>
+                                </li>
+                                <li>Restart Apache
+                                    <pre>sudo service apache2 restart</pre>
+                                </li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="configuration">
+                    <h1 class="text-dark pt-3">Configuration</h1>
+                    <ul>
+                        <li>
+                            <h5>Users:</h5>
+                            In the initial Script two user has been created as below:
+                            <ul>
+                                <li>
+                                    <b> User name :</b> admin@gmail.com
+                                    <b> Password :</b> admin@123
+                                </li>
+                                <li>
+                                    <b> User name :</b> employee@gmail.com
+                                    <b> Password :</b> employee@123 <br>
+                                </li>
+                            </ul>
+                            <b> admin@gmail.com </b> is Admin user and using this account you can add more users.
+                        </li>
+                        <li>
+                            <h5>SMTP Settings:</h5>
+                            In order to send email You need to configure the Default SMTP Settings under the Admin
+                            Area.
+                        </li>
+                        <li>
+                            <h5>
+                                Company Settings:
+                            </h5>
+                        </li>
+                        Change Title, Currency, Billing Address, Phone Number and Email from Company Profile inside
+                        the Setting. <br>
+                        <img class="noshadow" style="width: 100%;" src="img/company-profile-settings.png"
+                            alt="Company Profile">
+                    </ul>
+                </section>
+
+                <section id="deploy">
+                    <h3 class="text-dark pt-3">Re-deploy the Changes After Customization on the server.</h3>
+                    <ol>
+                        <h5>Build .Net Project</h5>
+                        <li>
+                            Publish the dotnet project.
+                        </li>
+                        <li>
+                            For the front-end, create the <strong>ClientApp</strong> folder inside the Publish folder.
+                        </li>
+                        <h5>Build Angular Project</h5>
+                        <li>
+                            Run <code>npm run build</code> that will create <strong> dist/posadminportal</strong>
+                            foder.
+                        </li>
+                        <li>
+                            copy all the files & folders inside <strong> dist/posadminportal</strong> and past it into
+                            <strong>ClientApp</strong>(created in step-2) folder.
+                        </li>
+                        <li>
+                            Now, Copy Publish Folder into your server.
+                        </li>
+                    </ol>
+                </section>
+
+                <section id="features">
+                    <h1 class="text-dark pt-3">Features</h1>
+                    <ul>
+                        <li>
+                            <strong> Dashboard: </strong>
+                            <ul>
+                                <li>Quick Statistics of total sales, purchase, sales return purchase return.</li>
+                                <li>Monthly best selling products chart.</li>
+                                <li>Calendar with reminder scheduler.</li>
+                                <li>Latest inquiry List.</li>
+                                <li>Recent sales order expected shipment.</li>
+                                <li>Recent purchase order expected delivery</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Products: </strong> Manage all products with brand, category, unit, sales price,
+                            purchase price,
+                            taxes and image.
+                        </li>
+                        <li>
+                            <strong>Suppliers: </strong> Manage all suppliers with billing and shipping address.
+                        </li>
+                        <li>
+                            <strong> Customers: </strong> Manage all your customers' details.
+                        </li>
+                        <li>
+                            <strong>Purchase Order: </strong>
+                            <ul>
+                                <li>Manage purchase order with multiple products and tax, discount, quantity and price.
+                                </li>
+                                <li>Generate/print purchase order invoice/receipt.</li>
+                                <li>Create multiple purchase order from purchase order request/quotes.</li>
+                                <li>Manage purchase order payments.</li>
+                                <li>Return specific item from existing purchase order and generate/print
+                                    invoice/receipt.</li>
+                                <li>Receive automated notification/email on delivery date of purchase order. </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Sales Order: </strong>
+                            <ul>
+                                <li>Manage sales order with multiple products and tax, discount, quantity and price.
+                                </li>
+                                <li>Generate/print sales order invoice/receipt.</li>
+                                <li>Manage sales order payments.</li>
+                                <li>Return specific item from existing sales order and generate/print invoice/receipt.
+                                </li>
+                                <li>Receive automated notification/email on shipment date of sales order. </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Inventory: </strong>
+                            <ul>
+                                <li>Product inventory is automatically manage by purchase and sale orders with average
+                                    sales, purchase
+                                    price and stock.
+                                    adjust stock inventory by adding manually.</li>
+                                <li>view All purchase, sale, purchase return and sales return history with unit per
+                                    price.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Expense: </strong>Manage all company expense with category and receipt.
+                        </li>
+                        <li>
+                            <strong>Inquiries: </strong>Keep track of all inquiries and manage it’s activities that have
+                            been generated
+                            from different sources. you can also set reminder on specific date to get notification or
+                            email to user.
+                        </li>
+                        <li>
+                            <strong>Reports: </strong>
+                            <ul>
+                                <li>Purchase order report </li>
+                                <li>Sales order report</li>
+                                <li>Purchase order payment report</li>
+                                <li>Sales order payment report</li>
+                                <li>Expense report</li>
+                                <li>Sales Vs Purchase report.</li>
+                                <li>Product Purchase Report</li>
+                                <li>Product Sales Report</li>
+                                <li>Stock Report</li>
+                                <li>Sales Vs Purchase Report</li>
+                                <li>Supplier Payment Report</li>
+                                <li>Customer Payment Report</li>
+                                <li>Profit/Loss Report</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Reminder Scheduler: </strong>You can set recurring Daily, Weekly, Monthly,
+                            Quarterly, Half Yearly,
+                            Yearly or Specific Date reminders in the system to get notification or email.
+                        </li>
+                        <li>
+                            <strong>Support Multiple Language: </strong>By default, the application comes with English,
+                            Chinese,
+                            Spanish, Arabic, Russian, Japanese, German and French languages. You can add a new language
+                            in just minutes.
+
+                        </li>
+                        <li>
+                            <strong>User & Role Management: </strong>Admin can create User and Role via admin panel and
+                            assign roles to
+                            users.
+                        </li>
+                        <li>
+                            <strong>Permissions: </strong>You can give staff specific permissions on what they can do or
+                            can’t do. Role
+                            and User permissions can be overridden for each staff member.
+                        </li>
+                        <li>
+                            <strong>High Performance: </strong>Advanced POS With Inventory Management is lightweight and
+                            has lightning
+                            fast performance and page
+                            load time out of the box.
+                        </li>
+                        <li>
+                            <strong>Email: </strong> Setup predefined email templates from text editor, Manage email
+                            SMTP and send
+                            predefined email template to supplier/anyone by one click.
+                        </li>
+                        <li>
+                            <strong>Full Source Code: </strong>You will get the full Source Code of Advanced POS With
+                            Inventory
+                            Management and build versions for
+                            SQL Server and MySQL database provider.
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="projectstructure">
+                    <h1 class="text-dark pt-3">.Net Core Project Structure</h1>
+                    <hr class="mt-0">
+                    <p>The project structure is as follows:</p>
+
+                    <pre class="prettyprint">
+POS.sln/                * Projects Solution
+│   │
+│   ├──POS.API                  * REST API Controller, Dependancy configuration, Auto mapper profile 
+│   │
+│   ├──POS.MediatR              * Command handler, Query handler, Fluent API validation
+│   │
+│   ├──POS.Repository           * Each entity repository
+│   │
+│   ├──POS.Domain               * Entity framework dbContext 
+|   |
+│   ├──POS.Common               * Generic repository and Unit of work patterns
+│   │ 
+│   ├──POS.Data                 * Entity classes and DTO classes
+│   │
+│   ├──POS.Helper               * Utility classes
+
+</pre>
+                </section>
+
+                <section id="support">
+                    <h1 class="text-dark pt-3">Support and Feedback</h1>
+                    <hr class="mt-0">
+                    <p>All questions you can send via the contact form <a
+                            href="https://codecanyon.net/user/mlglobtechnology#contact" target="_blank"><b>HERE</b></a>.
+                    </p>
+                    <p>I will answer all questions within 24-48h in the order they were received.</p>
+                    <p>Please do not panic if I do not answer too long – <b>I love my buyers and I’ll answer for all
+                            questions ;)</b></p>
+
+                    <h4>Support for my items includes:</h4>
+                    <ul>
+                        <li>Answering questions about how to use the item.</li>
+                        <li>Answering technical questions about the item (and included third party assets).</li>
+                        <li>Help with defects in the item or included third party assets.</li>
+                        <li>Item updates to ensure ongoing compatibility and to resolve security vulnerabilities.
+                        </li>
+                    </ul>
+                    <h4>Item support does not include:</h4>
+                    <ul>
+                        <li>Installation of the item.</li>
+                        <li>Hosting, server environment, or software.</li>
+                        <li>Support for third party plug-ins.</li>
+                        <li>Plugins integration.</li>
+                        <li>Support for issues caused by user modifications in the solution’s code, styling and
+                            general
+                            functionality.</li>
+                    </ul>
+                    <p>More information about the terms of support you can see here: <a
+                            href="https://themeforest.net/page/item_support_policy" target="_blank"
+                            class="alert-link">https://themeforest.net/page/item_support_policy</a></p>
+                </section>
+
+                <section id="conclusion">
+                    <h1 class="text-dark pt-3">Conclusion</h1>
+                    <hr class="mt-0">
+                    <h1>Thank you for your purchase!</h1>
+                    <p>Thanks for reading the Instruction, hope it’s been really helpful and resolved most of your
+                        concerns. </p>
+                    <hr class="mt-0">
+                    <h4 class="pb-5">Don’t forget to rate <img src="img/stars.png" alt="" class="noshadow"> if you
+                        enjoy
+                        the product! It is very important for us to have certain goal.</h2>
+                </section>
+
+            </div>
+        </div>
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/google-code-prettify/prettify.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
