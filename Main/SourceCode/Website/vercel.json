@@ -1,7 +1,7 @@
 {
   "version": 2,
   "installCommand": "npm install --legacy-peer-deps",
-  "buildCommand": "ng build --configuration=production",
+  "buildCommand": "npx ng build --configuration=production",
   "outputDirectory": "dist/posadminportal",
   "routes": [
     {
